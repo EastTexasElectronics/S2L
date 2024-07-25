@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "EC775668-3436-426A-B310-7CB533B3418D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:S2L.xcodeproj",
+        "identifier" : "8C5BBA972C51F82900CDAE18",
+        "name" : "S2LUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
