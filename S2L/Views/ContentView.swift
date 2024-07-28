@@ -30,11 +30,7 @@ struct ContentView: View {
             HelpView(isPresented: $modals.showingHelpModal)
         }
         .sheet(isPresented: $modals.showingBulkEditModal) {
-            if files.contains(where: { $0.isSelected }) {
-                BulkEditView(isPresented: $modals.showingBulkEditModal, settings: $bulkEditSettings, files: $files)
-            } else {
-                FeedbackView(isPresented: $isFeedbackViewPresented, message: "Error: Please select files to edit.")
-            }
+            BulkEditView(isPresented: $modals.showingBulkEditModal, settings: $bulkEditSettings, files: $files)
         }
         .sheet(isPresented: $modals.showingAboutModal) {
             AboutView(isPresented: $modals.showingAboutModal, latestVersion: latestVersion)
@@ -123,7 +119,14 @@ struct ContentView: View {
         HStack {
             ActionButton(label: "Remove Selected", icon: "trash", action: clearSelectedFiles)
             Spacer()
-            ActionButton(label: "Bulk Edit", icon: "pencil", action: { modals.showingBulkEditModal = true })
+            ActionButton(label: "Bulk Edit", icon: "pencil", action: {
+                if files.contains(where: { $0.isSelected }) {
+                    modals.showingBulkEditModal = true
+                } else {
+                    feedbackMessage = "Error: Please select files to edit."
+                    isFeedbackViewPresented = true
+                }
+            })
             Spacer()
             ActionButton(label: "Convert", icon: "arrow.right.circle", action: startConversion)
         }
@@ -357,6 +360,7 @@ struct ContentView: View {
         }
     }
 }
+
 // Preview for ContentView
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
