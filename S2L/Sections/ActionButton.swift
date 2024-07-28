@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A custom button view with a label and an icon.
-/// This button triggers a specified action when tapped.
+/// This button triggers a specified action when tapped
 struct ActionButton: View {
     let label: String
     let icon: String

@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Model for storing bulk edit settings.
+/// Model for storing bulk edit settings
 struct BulkEditSettings {
     var viewport: [String] = ["", "", "", ""]
     var className: String = ""

@@ -7,7 +7,7 @@ struct ProgressView: View {
     let destinationDirectory: String
     @Binding var filesConverted: Int
 //    TODO: Make this window 800x600 size upon opening and open in center of screen.
-//    TODO: Make progress scrollable area automatily move down as content it added.
+//    TODO: Make progress scrollable area automatily move down as content it added
 
     var body: some View {
         VStack {

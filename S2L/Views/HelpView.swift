@@ -56,7 +56,7 @@ struct HelpView: View {
                     Spacer()
                     
                     Button(action: {
-                        // Open email client
+                        // Open email clien
                         let email = "Contact@EastTexasElectronics.com"
                         if let url = URL(string: "mailto:\(email)") {
                             openURL(url)

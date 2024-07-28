@@ -47,7 +47,7 @@ struct ContentView: View {
             FeedbackView(isPresented: $isFeedbackViewPresented, message: feedbackMessage)
         }
         .onAppear {
-            // Comment out or modify the update check function as needed
+            // Comment out or modify the updte check function as needed
             // checkForUpdate()
         }
     }

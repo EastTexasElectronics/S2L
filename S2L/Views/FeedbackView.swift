@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view to display feedback messages to the user.
+/// A view to display feedback messages to the user
 struct FeedbackView: View {
     /// Binding to control the presentation state of the view.
     @Binding var isPresented: Bool

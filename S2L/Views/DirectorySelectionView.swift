@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view for selecting a directory with a text field and a browse button.
+/// A view for selecting a directory with a text field and a browse button
 struct DirectorySelectionView: View {
     /// The title to display above the directory selection controls.
     let title: String

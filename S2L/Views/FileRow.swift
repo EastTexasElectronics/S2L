@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view representing a single row for a file with various editable attributes.
+/// A view representing a single row for a file with various editable attributes
 struct FileRow: View {
     /// The binding to the file model.
     @Binding var file: File

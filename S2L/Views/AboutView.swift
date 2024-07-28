@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view that provides information about the app, including the app version and links to relevant resources.
+/// A view that provides information about the app, including the app version and links to relevant resources
 struct AboutView: View {
     /// Binding to control the presentation of the AboutView.
     @Binding var isPresented: Bool

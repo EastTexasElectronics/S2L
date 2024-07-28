@@ -1,5 +1,5 @@
 import Foundation
-
+//
 struct Directories {
     var inputDirectory: String = ""
     var outputDirectory: String = ""
