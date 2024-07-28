@@ -10,7 +10,7 @@ class HelpViewUITests: XCTestCase {
 
     func testGitHubButton() {
         let app = XCUIApplication()
-        app.buttons["HelpButton"].tap() // Use the new button to open HelpView
+        app.buttons["HelpButton"].tap() // Use the new button to open HelpVie
         let gitHubButton = app.buttons["GitHubButton"]
         XCTAssertTrue(gitHubButton.waitForExistence(timeout: 5))
         gitHubButton.tap()

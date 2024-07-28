@@ -31,7 +31,7 @@ final class ContentViewUITests: XCTestCase {
         bulkEditButton.tap()
         
         // Check that the bulk edit modal is shown
-        // Note: Add actual UI interaction code here if possible.
+        // Note: Add actual UI interaction code here if possible
     }
 
 }

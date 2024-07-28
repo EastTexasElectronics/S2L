@@ -1,10 +1,3 @@
-//
-//  S2LUITestsLaunchTests.swift
-//  S2LUITests
-//
-//  Created by Robert Havelaar on 7/24/24.
-//
-
 import XCTest
 
 final class S2LUITestsLaunchTests: XCTestCase {

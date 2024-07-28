@@ -27,7 +27,7 @@ final class S2LUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Use XCTAssert and related functions to verify your tests producethe correct results.
     }
 
     func testLaunchPerformance() throws {
