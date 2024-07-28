@@ -28,6 +28,7 @@
 		8C5BBA832C51F82800CDAE18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5BBA822C51F82800CDAE18 /* ContentView.swift */; };
 		8C5BBA852C51F82900CDAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5BBA842C51F82900CDAE18 /* Assets.xcassets */; };
 		8CDE8F3D2C56EC0000982E91 /* BulkEditSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE8F3C2C56EC0000982E91 /* BulkEditSettings.swift */; };
+		8CDE8F3F2C56F4B400982E91 /* checkForUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE8F3E2C56F4B400982E91 /* checkForUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		8C5BBA8E2C51F82900CDAE18 /* S2LTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S2LTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5BBA982C51F82900CDAE18 /* S2LUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S2LUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDE8F3C2C56EC0000982E91 /* BulkEditSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkEditSettings.swift; sourceTree = "<group>"; };
+		8CDE8F3E2C56F4B400982E91 /* checkForUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkForUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				8C070A4C2C54AE3900D956D9 /* Models.swift */,
 				8C1656F32C53EB4500EDC810 /* File.swift */,
 				8CDE8F3C2C56EC0000982E91 /* BulkEditSettings.swift */,
+				8CDE8F3E2C56F4B400982E91 /* checkForUpdate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				8C5BBA812C51F82800CDAE18 /* S2LApp.swift in Sources */,
 				8C070A452C54ADF400D956D9 /* DirectorySelectionView.swift in Sources */,
 				8C070A492C54AE1C00D956D9 /* FileHeader.swift in Sources */,
+				8CDE8F3F2C56F4B400982E91 /* checkForUpdate.swift in Sources */,
 				8C070A472C54AE0900D956D9 /* ToggleButton.swift in Sources */,
 				8C070A432C54ADDC00D956D9 /* HeaderButton.swift in Sources */,
 				8C1657002C53EBCC00EDC810 /* BulkEditView.swift in Sources */,

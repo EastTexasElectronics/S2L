@@ -4,7 +4,7 @@ import SwiftUI
 struct AboutView: View {
     @Binding var isPresented: Bool
     var latestVersion: String? = nil
-    private let appStoreURL = "https://apps.apple.com/app/idYOUR_APP_ID"
+    private let appStoreURL = "https://apps.apple.com/app/id6581479697"
 
     var body: some View {
         VStack {
@@ -25,12 +25,13 @@ struct AboutView: View {
                     }
 
                     // App version
-                    AboutSection(title: "App Version:", description: "1.0.0")
+                    AboutSection(title: "App Version:", description: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown")
                     
                     // Latest version
                     if let latestVersion = latestVersion {
                         AboutSection(title: "Latest Version:", description: latestVersion)
                     }
+
                     // GitHub link
                     AboutSection(title: "GitHub:", description: "Visit our GitHub repository for more information.", link: "https://github.com/EastTexasElectronics/SVG-2-Liquid-Public")
                     
@@ -73,17 +74,11 @@ struct AboutView: View {
     }
 }
 
-
 struct AboutSection: View {
     let title: String
     let description: String
     let link: String?
 
-    /* Initializes a new instance of `AboutSection`.
-     - Parameters:
-          - title: The title of the section.
-          - description: The description of the section.
-          - link: An optional link associated with the section. */
     init(title: String, description: String, link: String? = nil) {
         self.title = title
         self.description = description
@@ -106,7 +101,6 @@ struct AboutSection: View {
     }
 }
 
-// Preview provider for the AboutView.
 struct AboutView_Previews: PreviewProvider {
     @State static var isPresented = true
 

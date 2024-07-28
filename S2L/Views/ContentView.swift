@@ -1,6 +1,5 @@
 import SwiftUI
 
-// The main view of the app
 struct ContentView: View {
     @State private var directories = Directories()
     @State private var files: [File] = []
@@ -42,12 +41,10 @@ struct ContentView: View {
             FeedbackView(isPresented: $isFeedbackViewPresented, message: feedbackMessage)
         }
         .onAppear {
-            // TODO: Comment out when I get API key
-            // checkForUpdate()
+            checkForUpdate()
         }
     }
 
-    // Header view containing the logo and header buttons.
     private var headerView: some View {
         HStack {
             Spacer()
@@ -67,7 +64,6 @@ struct ContentView: View {
         }
     }
 
-    // The directory selection view for input and output directories
     private var directorySelectionView: some View {
         HStack {
             DirectorySelectionView(title: "Add Your SVG's:",
@@ -80,7 +76,6 @@ struct ContentView: View {
         .padding()
     }
 
-    // The header view for the files list
     private var filesHeaderView: some View {
         HStack(spacing: 0) {
             ToggleButton(isSelected: $selectAll, action: toggleSelectAll)
@@ -103,7 +98,6 @@ struct ContentView: View {
         .padding(.horizontal)
     }
 
-    // The list view displaying all files.
     private var filesListView: some View {
         List {
             ForEach($files) { $file in
@@ -114,7 +108,6 @@ struct ContentView: View {
         .accessibilityIdentifier("List of all files.")
     }
 
-    // The action buttons at the bottom of the view.
     private var actionButtons: some View {
         HStack {
             ActionButton(label: "Remove Selected", icon: "trash", action: clearSelectedFiles)
@@ -133,7 +126,6 @@ struct ContentView: View {
         .padding()
     }
 
-    // Opens a file dialog to select the input directory and add SVG files
     private func browseInputDirectory() {
         let panel = NSOpenPanel()
         panel.canChooseFiles = true
@@ -148,7 +140,6 @@ struct ContentView: View {
         }
     }
 
-    // Opens a file dialog to select the output directory
     private func browseOutputDirectory() {
         let panel = NSOpenPanel()
         panel.canChooseFiles = false
@@ -159,7 +150,6 @@ struct ContentView: View {
         }
     }
 
-    // Adds SVG files from the specified directory to the files list.
     private func addSVGFiles(in directory: URL) {
         let fileManager = FileManager.default
         do {
@@ -175,13 +165,11 @@ struct ContentView: View {
         }
     }
 
-    // Clears the selected files from the list and resets the select all toggle.
     private func clearSelectedFiles() {
         files.removeAll { $0.isSelected }
         selectAll = false
     }
 
-    // Starts the file conversion process
     private func startConversion() {
         logMessages = ""
         filesConverted = 0
@@ -190,7 +178,6 @@ struct ContentView: View {
         convertFiles()
     }
 
-    // Converts the files asynchronously and updates the log messages
     private func convertFiles() {
         Task {
             await withTaskGroup(of: String?.self) { group in
@@ -219,7 +206,6 @@ struct ContentView: View {
         }
     }
 
-    // Processes a single file by converting its contents and saving it to the output directory
     private func processFile(_ file: File) async -> String? {
         let inputURL = URL(fileURLWithPath: directories.inputDirectory).appendingPathComponent(file.name)
         let outputDirectoryURL = directories.outputDirectory.isEmpty ? URL(fileURLWithPath: directories.inputDirectory) : URL(fileURLWithPath: directories.outputDirectory)
@@ -262,7 +248,6 @@ struct ContentView: View {
         }
     }
 
-    // Removes the XML tag from the content if present.
     private func removeXMLTag(from content: String) -> String {
         guard content.hasPrefix("<?xml") else { return content }
         if let xmlTagEndRange = content.range(of: "?>") {
@@ -271,7 +256,6 @@ struct ContentView: View {
         return content
     }
 
-    // Updates the SVG tag in the content with the file's properties.
     private func updateSVGTag(for file: File, in content: String) -> String {
         var modifiedContent = content
         let svgTagPattern = "<svg[^>]*>"
@@ -295,7 +279,6 @@ struct ContentView: View {
         return modifiedContent
     }
 
-    //  Updates the path tags in the content with the file's properties.
     private func updatePathTags(for file: File, in content: String) -> String {
         guard !file.fill.isEmpty else { return content }
         var modifiedContent = content
@@ -315,20 +298,17 @@ struct ContentView: View {
         return modifiedContent
     }
 
-    // Toggles the selection of all files
     private func toggleSelectAll() {
         selectAll.toggle()
         files.indices.forEach { files[$0].isSelected = selectAll }
     }
 
-    // Removes a specific file from the files list
     private func removeFile(file: File) {
         if let index = files.firstIndex(where: { $0.id == file.id }) {
             files.remove(at: index)
         }
     }
 
-    // Applies bulk edit settings to the selected files
     private func applyBulkEdit() {
         for index in files.indices {
             if files[index].isSelected {
@@ -348,20 +328,21 @@ struct ContentView: View {
         }
     }
 
-    // Checks for updates and sets the update available flag if a new version is found
     private func checkForUpdate() {
-        let mockedLatestVersion = "1.1.0"
-        latestVersion = mockedLatestVersion
-
-        if let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            if currentVersion.compare(mockedLatestVersion, options: .numeric) == .orderedAscending {
-                isUpdateAvailable = true
+        fetchAppStoreVersion { appStoreVersion in
+            guard let appStoreVersion = appStoreVersion else { return }
+            
+            let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+            if currentVersion.compare(appStoreVersion, options: .numeric) == .orderedAscending {
+                DispatchQueue.main.async {
+                    latestVersion = appStoreVersion
+                    isUpdateAvailable = true
+                }
             }
         }
     }
 }
 
-// Preview for ContentView
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
