@@ -1,13 +1,10 @@
 import SwiftUI
 
-/// A view that provides information about the app, including the app version and links to relevant resources
+// A view that provides information about the app
 struct AboutView: View {
-    /// Binding to control the presentation of the AboutView.
     @Binding var isPresented: Bool
-    /// The latest version of the app available on the App Store.
-    var latestVersion: String? = nil  // Set to nil to indicate that an update is not available
-    /// The URL of the app on the App Store.
-    private let appStoreURL = "https://apps.apple.com/app/idYOUR_APP_ID"  // Replace with your actual App Store URL
+    var latestVersion: String? = nil
+    private let appStoreURL = "https://apps.apple.com/app/idYOUR_APP_ID"
 
     var body: some View {
         VStack {
@@ -34,7 +31,7 @@ struct AboutView: View {
                     if let latestVersion = latestVersion {
                         AboutSection(title: "Latest Version:", description: latestVersion)
                     }
-
+// TODO: UPDATE LINK
                     // GitHub link
                     AboutSection(title: "GitHub:", description: "Visit our GitHub repository for more information.", link: "https://github.com/EastTexasElectronics/s2l")
                     
@@ -77,20 +74,17 @@ struct AboutView: View {
     }
 }
 
-/// A view representing a section of the about information, including a title and description, with an optional link.
+
 struct AboutSection: View {
-    /// The title of the about section.
     let title: String
-    /// The description of the about section.
     let description: String
-    /// An optional link for the about section.
     let link: String?
 
-    /// Initializes a new instance of `AboutSection`.
-    /// - Parameters:
-    ///   - title: The title of the section.
-    ///   - description: The description of the section.
-    ///   - link: An optional link associated with the section.
+    /* Initializes a new instance of `AboutSection`.
+     - Parameters:
+          - title: The title of the section.
+          - description: The description of the section.
+          - link: An optional link associated with the section. */
     init(title: String, description: String, link: String? = nil) {
         self.title = title
         self.description = description
@@ -99,10 +93,8 @@ struct AboutSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            // Section title
             Text(title)
                 .fontWeight(.semibold)
-            // Description with optional link
             if let link = link, let url = URL(string: link) {
                 Link(description, destination: url)
                     .foregroundColor(.blue)
@@ -115,7 +107,7 @@ struct AboutSection: View {
     }
 }
 
-/// A preview provider for the AboutView.
+// Preview provider for the AboutView.
 struct AboutView_Previews: PreviewProvider {
     @State static var isPresented = true
 

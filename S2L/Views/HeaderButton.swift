@@ -1,5 +1,7 @@
 import SwiftUI
-//asd
+
+/* A custom help button view with an icon.
+    This button triggers a specified action when tapped. */
 struct HeaderButton: View {
     let iconName: String
     let action: () -> Void
@@ -12,3 +14,4 @@ struct HeaderButton: View {
         .accessibilityIdentifier("\(iconName)Button")
     }
 }
+

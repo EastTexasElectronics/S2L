@@ -1,5 +1,6 @@
 import SwiftUI
-//asd
+
+// Checkbox to select a file for bulk edit or removal
 struct ToggleButton: View {
     @Binding var isSelected: Bool
     let action: () -> Void
@@ -8,7 +9,7 @@ struct ToggleButton: View {
         Button(action: action) {
             Image(systemName: isSelected ? "checkmark.square" : "square")
         }
-        .help(isSelected ? "Deselect all files" : "Select all files")
+        .help(isSelected ? "Deselect All Files" : "Select All Files")
         .padding(.trailing, 8)
     }
 }

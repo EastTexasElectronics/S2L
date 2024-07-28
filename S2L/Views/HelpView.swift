@@ -1,22 +1,19 @@
 import SwiftUI
 
-/// A view that provides help information for using the SVG to Liquid Converter.
+// Help menu view, displays the help menu
 struct HelpView: View {
-    /// Binding to control the presentation of the HelpView.
     @Binding var isPresented: Bool
 
     var body: some View {
         ZStack {
-            // Main modal view
             VStack {
-                // Help content in a scrollable view
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         Text("How to Use the SVG to Liquid Converter")
                             .font(.title)
                             .fontWeight(.bold)
                             .padding(.bottom, 10)
-                            .frame(maxWidth: .infinity, alignment: .center) // Center the main view title
+                            .frame(maxWidth: .infinity, alignment: .center)
 
                         Group {
                             HelpSection(title: "1. Adding SVG Files:", description: "Click 'Browse' next to 'Add Your SVG's' to select SVG files or a directory containing SVG files.")
@@ -32,7 +29,6 @@ struct HelpView: View {
                             HelpSection(title: "5. Clearing Files:", description: "Use the 'Clear All' button to remove all files from the list.")
                             HelpSection(title: "6. Bulk Editing:", description: "Select multiple files using checkboxes, then click 'Bulk Edit' to modify them all at once.")
                         }
-
                     }
                     .padding()
                 }
@@ -40,7 +36,7 @@ struct HelpView: View {
                 // Buttons at the bottom
                 HStack {
                     Button(action: {
-                        // Open GitHub page
+                        // TODO: Update Link
                         if let url = URL(string: "https://rmhavelaar.dev/S2L") {
                             openURL(url)
                         }
@@ -56,7 +52,7 @@ struct HelpView: View {
                     Spacer()
                     
                     Button(action: {
-                        // Open email clien
+                        // Open email client to send support email
                         let email = "Contact@EastTexasElectronics.com"
                         if let url = URL(string: "mailto:\(email)") {
                             openURL(url)
@@ -87,18 +83,15 @@ struct HelpView: View {
         }
     }
     
-    /// Opens a URL using the default system browser.
-    /// - Parameter url: The URL to be opened.
+    // Opens a URL using the default system browser.
     private func openURL(_ url: URL) {
         NSWorkspace.shared.open(url)
     }
 }
 
-/// A view representing a help section with a title and description.
+// Help section with a title and description.
 struct HelpSection: View {
-    /// The title of the help section.
     let title: String
-    /// The description of the help section.
     let description: String
 
     var body: some View {
@@ -111,7 +104,7 @@ struct HelpSection: View {
     }
 }
 
-/// A preview for the HelpView.
+// A preview for the HelpView.
 struct HelpView_Previews: PreviewProvider {
     @State static var isPresented = true
 

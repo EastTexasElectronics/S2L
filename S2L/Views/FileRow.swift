@@ -1,10 +1,8 @@
 import SwiftUI
 
-/// A view representing a single row for a file with various editable attributes
+// View of a single row for a file with various editable attributes.
 struct FileRow: View {
-    /// The binding to the file model.
     @Binding var file: File
-    /// The action to perform when the remove button is tapped.
     var removeAction: () -> Void
 
     var body: some View {
@@ -28,35 +26,35 @@ struct FileRow: View {
             // Display the truncated file name.
             Text(file.name)
                 .lineLimit(1) // Truncate long file names
-                .frame(minWidth: 100, maxWidth: 200, alignment: .leading) // Adjust as necessary
+                .frame(minWidth: 100, maxWidth: 200, alignment: .leading)
             Spacer()
 
             // Editable fields for viewBox attributes.
             HStack {
                 TextField("x", text: Binding(
-                    get: { file.viewport[0] },
-                    set: { file.viewport[0] = $0 }
+                    get: { file.viewBox[0] },
+                    set: { file.viewBox[0] = $0 }
                 ))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 30)
 
                 TextField("y", text: Binding(
-                    get: { file.viewport[1] },
-                    set: { file.viewport[1] = $0 }
+                    get: { file.viewBox[1] },
+                    set: { file.viewBox[1] = $0 }
                 ))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 30)
 
                 TextField("width", text: Binding(
-                    get: { file.viewport[2] },
-                    set: { file.viewport[2] = $0 }
+                    get: { file.viewBox[2] },
+                    set: { file.viewBox[2] = $0 }
                 ))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 50)
 
                 TextField("height", text: Binding(
-                    get: { file.viewport[3] },
-                    set: { file.viewport[3] = $0 }
+                    get: { file.viewBox[3] },
+                    set: { file.viewBox[3] = $0 }
                 ))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 50)
@@ -64,7 +62,7 @@ struct FileRow: View {
             .frame(minWidth: 140, alignment: .center)
             Spacer()
 
-            // Editable field for className attribute.
+            // Editable field for class attribute.
             TextField("Class", text: $file.className)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(maxWidth: 150)
@@ -92,9 +90,9 @@ struct FileRow: View {
     }
 }
 
-/// SwiftUI preview for FileRow.
+// Preview for FileRow.
 struct FileRow_Previews: PreviewProvider {
-    @State static var file = File(name: "example.svg", viewport: ["0", "0", "100", "100"], className: "", fill: "", prefix: "")
+    @State static var file = File(name: "example.svg", viewBox: ["0", "0", "100", "100"], className: "", fill: "", prefix: "")
 
     static var previews: some View {
         FileRow(file: $file, removeAction: {})

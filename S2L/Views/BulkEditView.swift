@@ -1,20 +1,17 @@
 import SwiftUI
 
-/// Model for storing bulk edit settings
+// Model for storing bulk edit settings
 struct BulkEditSettings {
-    var viewport: [String] = ["", "", "", ""]
+    var viewBox: [String] = ["", "", "", ""]
     var className: String = ""
     var fill: String = ""
     var prefix: String = ""
 }
 
-/// View for performing bulk edits on files.
+// View for performing bulk edits on files.
 struct BulkEditView: View {
-    /// Binding to control the presentation state of the view.
     @Binding var isPresented: Bool
-    /// Binding to the bulk edit settings.
     @Binding var settings: BulkEditSettings
-    /// Binding to the list of files.
     @Binding var files: [File]
 
     var body: some View {
@@ -28,9 +25,7 @@ struct BulkEditView: View {
                 .padding(.bottom)
 
             VStack {
-                // Container for viewBox settings
-                viewportSection
-                // Container for other settings
+                viewBoxSection
                 settingsSection
             }
 
@@ -54,19 +49,19 @@ struct BulkEditView: View {
         .frame(width: 320, height: 320)
     }
 
-    /// View for the viewport section of the form.
-    private var viewportSection: some View {
+    // View for the viewBox section of the form.
+    private var viewBoxSection: some View {
         HStack(spacing: 10) {
-            viewBoxField(label: "X", text: $settings.viewport[0])
-            viewBoxField(label: "Y", text: $settings.viewport[1])
-            viewBoxField(label: "W", text: $settings.viewport[2])
-            viewBoxField(label: "H", text: $settings.viewport[3])
+            viewBoxField(label: "X", text: $settings.viewBox[0])
+            viewBoxField(label: "Y", text: $settings.viewBox[1])
+            viewBoxField(label: "W", text: $settings.viewBox[2])
+            viewBoxField(label: "H", text: $settings.viewBox[3])
         }
         .frame(maxWidth: .infinity, alignment: .center)
         .padding(.bottom, 20)
     }
 
-    /// View for the settings section of the form.
+    // View for the settings section of the form.
     private var settingsSection: some View {
         VStack(spacing: 20) {
             textFieldSection(title: "Class:", text: $settings.className)
@@ -76,14 +71,7 @@ struct BulkEditView: View {
         .frame(maxWidth: .infinity, alignment: .center)
     }
 
-    /**
-     Creates a view for a single viewBox field.
-     
-     - Parameters:
-       - label: The label for the field.
-       - text: The binding to the text for the field.
-     - Returns: A view representing the viewBox field.
-     */
+    // Creates a view for a single viewBox field.
     private func viewBoxField(label: String, text: Binding<String>) -> some View {
         VStack(alignment: .leading) {
             HStack {
@@ -96,14 +84,7 @@ struct BulkEditView: View {
         }
     }
 
-    /**
-     Creates a view for a single text field section.
-     
-     - Parameters:
-       - title: The title for the section.
-       - text: The binding to the text for the field.
-     - Returns: A view representing the text field section.
-     */
+    // Creates a view for a single text field section.
     private func textFieldSection(title: String, text: Binding<String>) -> some View {
         HStack {
             Text(title)
@@ -115,15 +96,12 @@ struct BulkEditView: View {
         }
     }
 
-    /**
-     Applies the bulk edit settings to the selected files.
-     
-     - Throws: An error if the bulk edit fails.
-     */
+    // Applies the bulk edit settings to the selected files.
+
     private func applyBulkEdit() throws {
         for index in files.indices where files[index].isSelected {
-            if !settings.viewport.allSatisfy({ $0.isEmpty }) {
-                files[index].viewport = settings.viewport
+            if !settings.viewBox.allSatisfy({ $0.isEmpty }) {
+                files[index].viewBox = settings.viewBox
             }
             if !settings.className.isEmpty {
                 files[index].className = settings.className
@@ -138,11 +116,11 @@ struct BulkEditView: View {
     }
 }
 
-/// SwiftUI preview for BulkEditView.
+// Preview for BulkEditView.
 struct BulkEditView_Previews: PreviewProvider {
     @State static var isPresented = true
     @State static var settings = BulkEditSettings()
-    @State static var files = [File(name: "File1", viewport: ["0", "0", "24", "24"], className: "icon", fill: "#000", prefix: "icon-", isSelected: true)]
+    @State static var files = [File(name: "File1", viewBox: ["0", "0", "24", "24"], className: "icon", fill: "#000", prefix: "icon-", isSelected: true)]
 
     static var previews: some View {
         BulkEditView(isPresented: $isPresented, settings: $settings, files: $files)
