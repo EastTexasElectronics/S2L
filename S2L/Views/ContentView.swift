@@ -46,7 +46,7 @@ struct ContentView: View {
             FeedbackView(isPresented: $isFeedbackViewPresented, message: feedbackMessage)
         }
         .onAppear {
-            // TODO: Comment out or modify the update check function as needed
+            // TODO: Comment out when I get API key
             // checkForUpdate()
         }
     }
@@ -172,9 +172,10 @@ struct ContentView: View {
         }
     }
 
-    // Clears the selected files from the list
+    // Clears the selected files from the list and resets the select all toggle.
     private func clearSelectedFiles() {
         files.removeAll { $0.isSelected }
+        selectAll = false
     }
 
     // Starts the file conversion process

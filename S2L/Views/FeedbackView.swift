@@ -27,9 +27,8 @@ struct FeedbackView: View {
                         .cornerRadius(10)
                 }
                 .accessibility(label: Text("Close button"))
-// TODO: UPDATE LINK
                 Button(action: {
-                    if let url = URL(string: "https://github.com/EastTexasElectronics/Svg2LiquidDemo/issues") {
+                    if let url = URL(string: "https://github.com/EastTexasElectronics/SVG-2-Liquid-Public/issues") {
                         NSWorkspace.shared.open(url)
                     }
                 }) {

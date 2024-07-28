@@ -36,8 +36,7 @@ struct HelpView: View {
                 // Buttons at the bottom
                 HStack {
                     Button(action: {
-                        // TODO: Update Link
-                        if let url = URL(string: "https://rmhavelaar.dev/S2L") {
+                        if let url = URL(string: "https://www.roberthavelaar.dev/S2L") {
                             openURL(url)
                         }
                     }) {
@@ -47,7 +46,7 @@ struct HelpView: View {
                     }
                     .buttonStyle(DefaultButtonStyle())
                     .padding()
-                    .accessibilityIdentifier("GitHubButton")
+                    .accessibilityIdentifier("Link to S2L Homepage")
 
                     Spacer()
                     

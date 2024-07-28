@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "s2l_Logo.png",
+      "filename" : "s2l_Banner.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "s2l_Banner.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

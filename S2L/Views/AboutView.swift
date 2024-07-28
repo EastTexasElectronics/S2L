@@ -31,9 +31,8 @@ struct AboutView: View {
                     if let latestVersion = latestVersion {
                         AboutSection(title: "Latest Version:", description: latestVersion)
                     }
-// TODO: UPDATE LINK
                     // GitHub link
-                    AboutSection(title: "GitHub:", description: "Visit our GitHub repository for more information.", link: "https://github.com/EastTexasElectronics/s2l")
+                    AboutSection(title: "GitHub:", description: "Visit our GitHub repository for more information.", link: "https://github.com/EastTexasElectronics/SVG-2-Liquid-Public")
                     
                     // Contact email link
                     AboutSection(title: "Contact:", description: "Contact us at Contact@EastTexasElectronics.com", link: "mailto:Contact@EastTexasElectronics.com")
