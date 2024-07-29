@@ -52,6 +52,17 @@
                ReferencedContainer = "container:S2L.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8CDE8F5E2C5700AD00982E91"
+               BuildableName = "S2LUITest.xctest"
+               BlueprintName = "S2LUITest"
+               ReferencedContainer = "container:S2L.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
