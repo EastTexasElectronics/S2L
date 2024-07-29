@@ -1,8 +1,7 @@
-//
-//  Directories.swift
-//  S2L
-//
-//  Created by Robert Havelaar on 7/28/24.
-//
-
 import Foundation
+
+// A model representing the directories used in the application.
+struct Directories {
+    var inputDirectory: String = ""
+    var outputDirectory: String = ""
+}

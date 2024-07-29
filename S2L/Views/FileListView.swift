@@ -1,18 +1,16 @@
-//
-//  FileListView.swift
-//  S2L
-//
-//  Created by Robert Havelaar on 7/28/24.
-//
-
 import SwiftUI
 
-struct FileListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct FilesListView: View {
+    @Binding var files: [File]
+    var removeFile: (File) -> Void
 
-#Preview {
-    FileListView()
+    var body: some View {
+        List {
+            ForEach($files) { $file in
+                FileRow(file: $file, removeAction: { removeFile(file) })
+            }
+        }
+        .frame(maxHeight: .infinity)
+        .accessibilityIdentifier("List of all files.")
+    }
 }

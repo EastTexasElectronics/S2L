@@ -1,41 +1,87 @@
-//
-//  S2LUITest.swift
-//  S2LUITest
-//
-//  Created by Robert Havelaar on 7/28/24.
-//
-
 import XCTest
 
-final class S2LUITest: XCTestCase {
+class S2LUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        continueAfterFailure = false
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        let app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAddSVGFiles() throws {
         let app = XCUIApplication()
-        app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Simulate browsing for SVG input directory
+        let addSvgButton = app.buttons["Browse"]
+        addSvgButton.firstMatch.tap()
+
+        // Assuming a modal opens to select directory
+        let fileDialog = app.dialogs.firstMatch
+        let svgDirectory = "/Users/rmh/desktop/svg"
+        fileDialog.textFields["Directory"].typeText(svgDirectory)
+        fileDialog.buttons["Open"].click()
+
+        // Verify that files have been added
+        let filesList = app.tables["List of all files."]
+        XCTAssert(filesList.cells.count > 0, "SVG files should be listed after directory is added")
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    func testStartConversion() throws {
+        let app = XCUIApplication()
+
+        // Simulate browsing for SVG input directory
+        let addSvgButton = app.buttons["Browse"]
+        addSvgButton.firstMatch.tap()
+
+        // Assuming a modal opens to select directory
+        let fileDialog = app.dialogs.firstMatch
+        let svgDirectory = "/Users/rmh/desktop/svg"
+        fileDialog.textFields["Directory"].typeText(svgDirectory)
+        fileDialog.buttons["Open"].click()
+
+        // Start conversion
+        let convertButton = app.buttons["Convert"]
+        convertButton.tap()
+
+        // Verify that progress view is displayed
+        let progressView = app.windows["S2L Terminal"]
+        XCTAssert(progressView.exists, "Progress view should be displayed after starting conversion")
+    }
+
+    func testVerifyProgress() throws {
+        let app = XCUIApplication()
+
+        // Simulate browsing for SVG input directory
+        let addSvgButton = app.buttons["Browse"]
+        addSvgButton.firstMatch.tap()
+
+        // Assuming a modal opens to select directory
+        let fileDialog = app.dialogs.firstMatch
+        let svgDirectory = "/Users/rmh/desktop/svg"
+        fileDialog.textFields["Directory"].typeText(svgDirectory)
+        fileDialog.buttons["Open"].click()
+
+        // Start conversion
+        let convertButton = app.buttons["Convert"]
+        convertButton.tap()
+
+        // Verify that progress view is displayed
+        let progressView = app.windows["S2L Terminal"]
+        XCTAssert(progressView.exists, "Progress view should be displayed after starting conversion")
+
+        // Verify log messages
+        let logTextView = progressView.textViews.firstMatch
+        let logText = logTextView.value as! String
+        XCTAssert(logText.contains("Success: Converted file"), "Log should contain success message for file conversion")
     }
 }
