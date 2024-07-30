@@ -11,7 +11,7 @@ struct HeaderView: View {
                 .frame(width: 500, height: 100)
                 .aspectRatio(contentMode: .fit)
                 .padding()
-                .accessibilityLabel("S2L Banner Logo")
+                .accessibilityLabel("SVG 2 Liquid Banner Logo")
             Spacer()
             HeaderButton(iconName: "questionmark.circle", action: {
                 modals.showingHelpModal = true

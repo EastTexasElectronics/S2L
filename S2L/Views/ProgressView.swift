@@ -10,7 +10,7 @@ struct ProgressView: View {
 
     var body: some View {
         VStack {
-            Text("S2L Terminal")
+            Text("SVG 2 Liquid Terminal")
                 .font(.largeTitle)
                 .padding()
                 .accessibility(label: Text("Information on this view displays success or failure messages. If an error has occurred you will also see it after closing this window."))

@@ -17,14 +17,14 @@ struct S2LApp: App {
         }
         .commands {
             CommandGroup(replacing: .appInfo) {
-                Button("About S2L") {
+                Button("About") {
                     showingAboutView = true
                 }
                 .keyboardShortcut(",", modifiers: .command)
             }
             
             CommandGroup(replacing: .help) {
-                Button("S2L Help") {
+                Button("Help") {
                     showingHelpView = true
                 }
                 .keyboardShortcut("?", modifiers: .command)

@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8C5BBA7C2C51F82800CDAE18"
-               BuildableName = "S2L.app"
-               BlueprintName = "S2L"
-               ReferencedContainer = "container:S2L.xcodeproj">
+               BuildableName = "SVG 2 Liquid.app"
+               BlueprintName = "SVG 2 Liquid"
+               ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,10 +35,32 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8C5BBA8D2C51F82900CDAE18"
+               BuildableName = "SVG 2 LiquidTests.xctest"
+               BlueprintName = "SVG 2 LiquidTests"
+               ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8C5BBA972C51F82900CDAE18"
+               BuildableName = "SVG 2 LiquidUITests.xctest"
+               BlueprintName = "SVG 2 LiquidUITests"
+               ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "8CDE8F5E2C5700AD00982E91"
-               BuildableName = "S2LUITest.xctest"
-               BlueprintName = "S2LUITest"
-               ReferencedContainer = "container:S2L.xcodeproj">
+               BuildableName = "SVG 2 LiquidUITest.xctest"
+               BlueprintName = "SVG 2 LiquidUITest"
+               ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C5BBA7C2C51F82800CDAE18"
-            BuildableName = "S2L.app"
-            BlueprintName = "S2L"
-            ReferencedContainer = "container:S2L.xcodeproj">
+            BuildableName = "SVG 2 Liquid.app"
+            BlueprintName = "SVG 2 Liquid"
+            ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -75,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C5BBA7C2C51F82800CDAE18"
-            BuildableName = "S2L.app"
-            BlueprintName = "S2L"
-            ReferencedContainer = "container:S2L.xcodeproj">
+            BuildableName = "SVG 2 Liquid.app"
+            BlueprintName = "SVG 2 Liquid"
+            ReferencedContainer = "container:SVG 2 Liquid.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
