@@ -28,7 +28,7 @@ struct FeedbackView: View {
                 }
                 .accessibility(label: Text("Close button"))
                 Button(action: {
-                    if let url = URL(string: "https://github.com/EastTexasElectronics/SVG-2-Liquid-Public/issues") {
+                    if let url = URL(string: "https://www.roberthavelaar.dev/S2L") {
                         NSWorkspace.shared.open(url)
                     }
                 }) {

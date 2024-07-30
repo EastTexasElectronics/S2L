@@ -33,7 +33,7 @@ struct AboutView: View {
                     }
 
                     // GitHub link
-                    AboutSection(title: "GitHub:", description: "Visit our GitHub repository for more information.", link: "https://github.com/EastTexasElectronics/SVG-2-Liquid-Public")
+                    AboutSection(title: "Website:", description: "Visit our website for more information.", link: "https://roberthavelaar.dev/S2L")
                     
                     // Contact email link
                     AboutSection(title: "Contact:", description: "Contact us at Contact@EastTexasElectronics.com", link: "mailto:Contact@EastTexasElectronics.com")

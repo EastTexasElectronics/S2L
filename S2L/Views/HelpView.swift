@@ -41,7 +41,7 @@ struct HelpView: View {
                         }
                     }) {
                         HStack {
-                            Text("Website")
+                            Text("Support Website")
                         }
                     }
                     .buttonStyle(DefaultButtonStyle())
