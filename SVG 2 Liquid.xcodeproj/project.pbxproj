@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,13 +72,13 @@
 		8C1657032C53EBDD00EDC810 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		8C2930462C555C6900792225 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8C3E717A2C56B62400F1EFFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8C5BBA7D2C51F82800CDAE18 /* S2L.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = S2L.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5BBA7D2C51F82800CDAE18 /* SVG 2 Liquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SVG 2 Liquid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5BBA802C51F82800CDAE18 /* S2LApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2LApp.swift; sourceTree = "<group>"; };
 		8C5BBA822C51F82800CDAE18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C5BBA842C51F82900CDAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C5BBA892C51F82900CDAE18 /* S2L.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = S2L.entitlements; sourceTree = "<group>"; };
-		8C5BBA8E2C51F82900CDAE18 /* S2LTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S2LTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C5BBA982C51F82900CDAE18 /* S2LUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S2LUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5BBA8E2C51F82900CDAE18 /* SVG 2 LiquidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SVG 2 LiquidTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5BBA982C51F82900CDAE18 /* SVG 2 LiquidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SVG 2 LiquidUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDE8F3E2C56F4B400982E91 /* checkForUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkForUpdate.swift; sourceTree = "<group>"; };
 		8CDE8F462C56F9D000982E91 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8CDE8F482C56F9F500982E91 /* FileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHeaderView.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		8CDE8F4E2C56FA4400982E91 /* FileConversionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileConversionManager.swift; sourceTree = "<group>"; };
 		8CDE8F502C56FA7B00982E91 /* Directories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directories.swift; sourceTree = "<group>"; };
 		8CDE8F522C56FAA600982E91 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
-		8CDE8F5F2C5700AD00982E91 /* S2LUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S2LUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDE8F5F2C5700AD00982E91 /* SVG 2 LiquidUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SVG 2 LiquidUITest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,10 +169,10 @@
 		8C5BBA7E2C51F82800CDAE18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C5BBA7D2C51F82800CDAE18 /* S2L.app */,
-				8C5BBA8E2C51F82900CDAE18 /* S2LTests.xctest */,
-				8C5BBA982C51F82900CDAE18 /* S2LUITests.xctest */,
-				8CDE8F5F2C5700AD00982E91 /* S2LUITest.xctest */,
+				8C5BBA7D2C51F82800CDAE18 /* SVG 2 Liquid.app */,
+				8C5BBA8E2C51F82900CDAE18 /* SVG 2 LiquidTests.xctest */,
+				8C5BBA982C51F82900CDAE18 /* SVG 2 LiquidUITests.xctest */,
+				8CDE8F5F2C5700AD00982E91 /* SVG 2 LiquidUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,9 +192,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C5BBA7C2C51F82800CDAE18 /* S2L */ = {
+		8C5BBA7C2C51F82800CDAE18 /* SVG 2 Liquid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C5BBAA22C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2L" */;
+			buildConfigurationList = 8C5BBAA22C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 Liquid" */;
 			buildPhases = (
 				8C5BBA792C51F82800CDAE18 /* Sources */,
 				8C5BBA7A2C51F82800CDAE18 /* Frameworks */,
@@ -204,14 +204,14 @@
 			);
 			dependencies = (
 			);
-			name = S2L;
+			name = "SVG 2 Liquid";
 			productName = S2L;
-			productReference = 8C5BBA7D2C51F82800CDAE18 /* S2L.app */;
+			productReference = 8C5BBA7D2C51F82800CDAE18 /* SVG 2 Liquid.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8C5BBA8D2C51F82900CDAE18 /* S2LTests */ = {
+		8C5BBA8D2C51F82900CDAE18 /* SVG 2 LiquidTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C5BBAA52C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2LTests" */;
+			buildConfigurationList = 8C5BBAA52C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidTests" */;
 			buildPhases = (
 				8C5BBA8A2C51F82900CDAE18 /* Sources */,
 				8C5BBA8B2C51F82900CDAE18 /* Frameworks */,
@@ -222,14 +222,14 @@
 			dependencies = (
 				8C5BBA902C51F82900CDAE18 /* PBXTargetDependency */,
 			);
-			name = S2LTests;
+			name = "SVG 2 LiquidTests";
 			productName = S2LTests;
-			productReference = 8C5BBA8E2C51F82900CDAE18 /* S2LTests.xctest */;
+			productReference = 8C5BBA8E2C51F82900CDAE18 /* SVG 2 LiquidTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8C5BBA972C51F82900CDAE18 /* S2LUITests */ = {
+		8C5BBA972C51F82900CDAE18 /* SVG 2 LiquidUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C5BBAA82C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2LUITests" */;
+			buildConfigurationList = 8C5BBAA82C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidUITests" */;
 			buildPhases = (
 				8C5BBA942C51F82900CDAE18 /* Sources */,
 				8C5BBA952C51F82900CDAE18 /* Frameworks */,
@@ -240,14 +240,14 @@
 			dependencies = (
 				8C5BBA9A2C51F82900CDAE18 /* PBXTargetDependency */,
 			);
-			name = S2LUITests;
+			name = "SVG 2 LiquidUITests";
 			productName = S2LUITests;
-			productReference = 8C5BBA982C51F82900CDAE18 /* S2LUITests.xctest */;
+			productReference = 8C5BBA982C51F82900CDAE18 /* SVG 2 LiquidUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		8CDE8F5E2C5700AD00982E91 /* S2LUITest */ = {
+		8CDE8F5E2C5700AD00982E91 /* SVG 2 LiquidUITest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CDE8F672C5700AD00982E91 /* Build configuration list for PBXNativeTarget "S2LUITest" */;
+			buildConfigurationList = 8CDE8F672C5700AD00982E91 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidUITest" */;
 			buildPhases = (
 				8CDE8F5B2C5700AD00982E91 /* Sources */,
 				8CDE8F5C2C5700AD00982E91 /* Frameworks */,
@@ -258,9 +258,9 @@
 			dependencies = (
 				8CDE8F662C5700AD00982E91 /* PBXTargetDependency */,
 			);
-			name = S2LUITest;
+			name = "SVG 2 LiquidUITest";
 			productName = S2LUITest;
-			productReference = 8CDE8F5F2C5700AD00982E91 /* S2LUITest.xctest */;
+			productReference = 8CDE8F5F2C5700AD00982E91 /* SVG 2 LiquidUITest.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -290,8 +290,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 8C5BBA782C51F82800CDAE18 /* Build configuration list for PBXProject "S2L" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 8C5BBA782C51F82800CDAE18 /* Build configuration list for PBXProject "SVG 2 Liquid" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -303,10 +303,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C5BBA7C2C51F82800CDAE18 /* S2L */,
-				8C5BBA8D2C51F82900CDAE18 /* S2LTests */,
-				8C5BBA972C51F82900CDAE18 /* S2LUITests */,
-				8CDE8F5E2C5700AD00982E91 /* S2LUITest */,
+				8C5BBA7C2C51F82800CDAE18 /* SVG 2 Liquid */,
+				8C5BBA8D2C51F82900CDAE18 /* SVG 2 LiquidTests */,
+				8C5BBA972C51F82900CDAE18 /* SVG 2 LiquidUITests */,
+				8CDE8F5E2C5700AD00982E91 /* SVG 2 LiquidUITest */,
 			);
 		};
 /* End PBXProject section */
@@ -401,17 +401,17 @@
 /* Begin PBXTargetDependency section */
 		8C5BBA902C51F82900CDAE18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8C5BBA7C2C51F82800CDAE18 /* S2L */;
+			target = 8C5BBA7C2C51F82800CDAE18 /* SVG 2 Liquid */;
 			targetProxy = 8C5BBA8F2C51F82900CDAE18 /* PBXContainerItemProxy */;
 		};
 		8C5BBA9A2C51F82900CDAE18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8C5BBA7C2C51F82800CDAE18 /* S2L */;
+			target = 8C5BBA7C2C51F82800CDAE18 /* SVG 2 Liquid */;
 			targetProxy = 8C5BBA992C51F82900CDAE18 /* PBXContainerItemProxy */;
 		};
 		8CDE8F662C5700AD00982E91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8C5BBA7C2C51F82800CDAE18 /* S2L */;
+			target = 8C5BBA7C2C51F82800CDAE18 /* SVG 2 Liquid */;
 			targetProxy = 8CDE8F652C5700AD00982E91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -545,7 +545,7 @@
 				CODE_SIGN_ENTITLEMENTS = S2L/S2L.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"S2L/Preview Content\"";
 				DEVELOPMENT_TEAM = XDRGP2DC92;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -577,7 +577,7 @@
 				CODE_SIGN_ENTITLEMENTS = S2L/S2L.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"S2L/Preview Content\"";
 				DEVELOPMENT_TEAM = XDRGP2DC92;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -614,7 +614,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S2L.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/S2L";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SVG 2 Liquid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SVG 2 Liquid";
 			};
 			name = Debug;
 		};
@@ -633,7 +633,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/S2L.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/S2L";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SVG 2 Liquid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SVG 2 Liquid";
 			};
 			name = Release;
 		};
@@ -718,7 +718,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C5BBA782C51F82800CDAE18 /* Build configuration list for PBXProject "S2L" */ = {
+		8C5BBA782C51F82800CDAE18 /* Build configuration list for PBXProject "SVG 2 Liquid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5BBAA02C51F82900CDAE18 /* Debug */,
@@ -727,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C5BBAA22C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2L" */ = {
+		8C5BBAA22C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 Liquid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5BBAA32C51F82900CDAE18 /* Debug */,
@@ -736,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C5BBAA52C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2LTests" */ = {
+		8C5BBAA52C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5BBAA62C51F82900CDAE18 /* Debug */,
@@ -745,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C5BBAA82C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "S2LUITests" */ = {
+		8C5BBAA82C51F82900CDAE18 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C5BBAA92C51F82900CDAE18 /* Debug */,
@@ -754,7 +754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CDE8F672C5700AD00982E91 /* Build configuration list for PBXNativeTarget "S2LUITest" */ = {
+		8CDE8F672C5700AD00982E91 /* Build configuration list for PBXNativeTarget "SVG 2 LiquidUITest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CDE8F682C5700AD00982E91 /* Debug */,

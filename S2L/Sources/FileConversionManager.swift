@@ -1,6 +1,6 @@
 import Foundation
 import AppKit
-
+//
 class FileConversionManager: ObservableObject {
     @Published var directories = Directories()
     @Published var files: [File] = []
